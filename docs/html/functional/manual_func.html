@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>การออกเลข Pre-print ในระบบ &mdash; ETAX  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="โครงสร้างการเขียน Code สำหรับระบบอื่น" href="../technical/manual_tech.html" />
+    <link rel="prev" title="Welcome to ETAX Documentation" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> ETAX
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">การออกเลข Pre-print ในระบบ</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">การตั้งค่าระบบการออกหมายเลข Pre-print</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">วิธีการเรียกใช้ Pre-print ในระบบ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#pabi2">การตั้งค่าการเชื่อมต่อในระบบ PABI2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#docsign-server-i-net">การตั้งค่าการเชื่อมต่อ Docsign Server ไปยัง i-net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id3">การส่งเอกสารในระบบ PABI2 เพื่อลงลายมือชื่ออิเล็กทรอนิกส์</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../technical/manual_tech.html">โครงสร้างการเขียน Code สำหรับระบบอื่น</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../technical/manual_tech.html#id1">เอกสารเพิ่มเติม</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ETAX</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>การออกเลข Pre-print ในระบบ</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/functional/manual_func.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pre-print">
+<h1>การออกเลข Pre-print ในระบบ<a class="headerlink" href="#pre-print" title="Permalink to this headline">¶</a></h1>
+<p>เมื่อทำการติดตั้งโมดูล pabi_ir_sequence_preprint ระบบ PABI2 จะสามารถสร้างหมายเลข Pre-print เมื่อเอกสารใบนั้นกำลังจะทำการบันทึกภาษี โดยที่ไม่ต้องใช้หมายเลขจากกระดาษ Pre-print ซึ่งจะมีรูปแบบหมายเลขดังนี้</p>
+<ul class="simple">
+<li><p>Receipt Tax Invoice : รูปแบบ RT&lt;ปีปฏิทิน&gt;/&lt;เดือนปฏิทิน&gt;-&lt;หมายเลข 4 หลัก&gt; เช่น RT2563/08-0001</p></li>
+<li><p>Invoice Tax : รูปแบบ IVT&lt;ปีปฏิทิน&gt;/&lt;เดือนปฏิทิน&gt;-&lt;หมายเลข 4 หลัก&gt; เช่น IVT2563/08-0001</p></li>
+</ul>
+<div class="section" id="id1">
+<h2>การตั้งค่าระบบการออกหมายเลข Pre-print<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>ไปที่เมนู Settings &gt; Technical &gt; Sequences &amp; Identifiers</p></li>
+<li><p>จะพบว่ามีเมนูใหม่เพิ่มขึ้นมา คือ Sequence Preprint ให้เลือกเอกสารที่ต้องการแก้ไข</p></li>
+</ul>
+<img alt="../_images/image2.png" class="align-center" src="../_images/image2.png" />
+<ul class="simple">
+<li><p>หมายเลข 1 คือ การแสดง &lt;หมายเลข&gt; จำนวนกี่หลัก</p></li>
+<li><p>หมายเลข 2 คือ การเพิ่มขึ้นของ &lt;หมายเลข&gt; ครั้งละเท่าไหร่</p></li>
+<li><p>หมายเลข 3 คือ การแสดง &lt;ปีปฏิทิน&gt; เป็น พุทธศักราช (พ.ศ.) หากไม่เลือกระบบจะแสดงเป็น คริสต์ศักราช (ค.ศ.)</p></li>
+<li><p>หมายเลข 4 คือ การแบ่งการสร้างหมายเลขถัดไป</p></li>
+<li><p>หมายเลข 5 คือ การสร้างหมายเลขใหม่ทุกๆเดือน หากไม่เลือกระบบจะสร้างหมายเลขใหม่ทุกๆปี</p></li>
+<li><p>หมายเลข 6 คือ ระยะเวลาในการสร้างหมายเลข เมื่อเลยช่วงระยะเวลา ระบบจะสร้างของเดือนถัดไปให้อัตโนมัติ (กรณีเลือกข้อ 5)</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>วิธีการเรียกใช้ Pre-print ในระบบ<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>คล้ายกับการเรียก Sequence เดิม คือ เรียกโดยใช้ function next_by_id หรือ next_by_code ได้ โดยจะต้องเรียก module ที่ชื่อว่า ir.sequence.preprint สามารถดูตัวอย่างการเรียกใช้ Pre-print ได้ที่ ./pb2_addons/l10n_th_account_tax_detail/models/account_tax_detail.py ใน function _create_sequence_preprint</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="pabi2">
+<h1>การตั้งค่าการเชื่อมต่อในระบบ PABI2<a class="headerlink" href="#pabi2" title="Permalink to this headline">¶</a></h1>
+<p>เมื่อทำการติดตั้งโมดูล pabi_docsign_interface ให้ไปที่เมนู: Settings &gt; Configuration &gt; PABI Web. จะเห็นว่าในระบบมีการตั้งค่าเพิ่มเติมในหัวข้อ e-Tax Webservice Configuration</p>
+<img alt="../_images/image3.png" class="align-center" src="../_images/image3.png" />
+<ul>
+<li><p>ซึ่งจะมีรายละเอียดการตั้งค่าดังนี้</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>หมายเลข 1 : กรอก URL ของ Docsign Server</p></li>
+<li><p>หมายเลข 2 : กรอกชื่อ Database ของ Docsign Server</p></li>
+<li><p>หมายเลข 3 : กรอก username</p></li>
+<li><p>หมายเลข 4 : กรอก password</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="docsign-server-i-net">
+<h1>การตั้งค่าการเชื่อมต่อ Docsign Server ไปยัง i-net<a class="headerlink" href="#docsign-server-i-net" title="Permalink to this headline">¶</a></h1>
+<p>หลังจากได้รับ key จริงแล้ว ทาง สวทช. จะต้องมาแก้ไขที่ระบบ Server เพื่อให้ระบบส่งข้อมูลไปให้ i-net โดยมีขั้นตอนการตั้งค่าดังนี้</p>
+<ol class="arabic simple">
+<li><p>ไปที่เมนู Settings &gt; Technical &gt; Parameters &gt; System Parameters</p></li>
+<li><p>ข้อมูลที่ขึ้นต้นด้วย webservice ทั้งหมดจะได้รับจากทาง i-net</p></li>
+</ol>
+<img alt="../_images/image4.png" class="align-center" src="../_images/image4.png" />
+<ol class="arabic simple" start="3">
+<li><p>ปัจจุบันข้อมูลที่ใช้เป็น webservice ที่สำหรับทดสอบเท่านั้น เมื่อได้รับข้อมูลจาก i-net แล้วสามารถแก้ไขข้อมูลในส่วนนี้ให้ถูกต้อง</p></li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h1>การส่งเอกสารในระบบ PABI2 เพื่อลงลายมือชื่ออิเล็กทรอนิกส์<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>เอกสารที่ระบบ Docsign Server รองรับมีทั้งหมด 4 ประเภท คือ</p>
+<ol class="arabic simple">
+<li><p>ใบเสร็จรับเงิน / ใบกำกับภาษี</p></li>
+<li><p>ใบเสร็จรับเงิน / ใบกำกับภาษี 300% (ในระบบ PABI2 คือ 200%)</p></li>
+<li><p>ใบลดหนี้ / ใบกำกับภาษี</p></li>
+<li><p>ใบส่งของ / ใบกำกับภาษี (ส่งจาก mySale)</p></li>
+</ol>
+<p>วิธีการลงลายมือชื่ออิเล็กทรอนิกส์</p>
+<ol class="arabic simple">
+<li><p>ไปที่เมนู Accounting &gt; Customers &gt; Customer Payments</p></li>
+<li><p>ที่หน้าเอกสารจะมี Field เพิ่มขึ้นมาชื่อว่า State Sign เพื่อบอกสถานะการลงลายมือชื่ออิเล็กทรอนิกส์ของเอกสารนั้น ๆ</p></li>
+<li><p>Print &gt; Print Receipt</p></li>
+</ol>
+<img alt="../_images/image5.png" class="align-center" src="../_images/image5.png" />
+<ol class="arabic" start="4">
+<li><p>ที่หน้า Print จะมีปุ่มเพิ่มขึ้นมา 3 ปุ่มคือ Preview, Sign และ Update Sign</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Preview คือ การสร้างเอกสารใน Docsign Server และส่งกลับมาที่ระบบต้นทาง โดยจะไม่มีการลงลายมือชื่ออิเล็กทรอนิกส์ เพื่อให้ผู้ใช้งานเห็นเอกสารก่อนที่จะลงลายมือชื่ออิเล็กทรอนิกส์</p></li>
+<li><p>Sign คือ การสร้างเอกสารใน Document Server และส่งข้อมูลทั้งหมดไปลงลายมือชื่ออิเล็กทรอนิกส์ ก่อนที่จะส่งกลับมาที่ต้นทาง</p></li>
+<li><p>Update Sign จะเห็นแทนปุ่ม Sign เมื่อเอกสารนั้นเคยลงลายมือชื่ออิเล็กทรอนิกส์ไปแล้ว ใช้สำหรับการแก้ไขข้อมูลในเอกสารนั้น</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<img alt="../_images/image6.png" class="align-center" src="../_images/image6.png" />
+<ol class="arabic simple" start="5">
+<li><p>เลือกฟอร์มที่ต้องการลงลายมือชื่ออิเล็กทรอนิกส์ ถ้าฟอร์มที่เลือกนั้นไม่สามารถลงลายมือชื่ออิเล็กทรอนิกส์ได้ระบบจะขึ้น Error ซึ่งเอกสารที่รองรับการลงลายมือชื่ออิเล็กทรอนิกส์ สามารถดูได้จากด้านบน</p></li>
+</ol>
+<img alt="../_images/image7.png" class="align-center" src="../_images/image7.png" />
+<ol class="arabic simple" start="6">
+<li><p>กรณีต้องการดูตัวอย่างเอกสารก่อนลงลายมือชื่ออิเล็กทรอนิกส์จริง สามารถคลิกที่ปุ่ม Preview แล้วระบบจะสร้างเอกสารให้ที่ Attachment File</p></li>
+</ol>
+<img alt="../_images/image8.png" class="align-center" src="../_images/image8.png" />
+<ol class="arabic simple" start="7">
+<li><p>เมื่อตรวจสอบข้อมูลถูกต้องแล้วสามารถคลิกปุ่ม Sign ได้เลย ซึ่งในระบบจะยืนยันการทำรายการอีกทีหนึ่ง</p></li>
+</ol>
+<p>ถ้าระบบลงลายมือชื่ออิเล็กทรอนิกส์สำเร็จ กรณีมีเอกสารที่เคย Preview ไว้จะหายไป และมีเอกสารที่ลงลายมือชื่ออิเล็กทรอนิกส์สำเร็จมาแทนที่ หากไม่เคย Preview จะพบว่ามีเอกสารไฟล์แนบเพิ่มขึ้นมา ซึ่งจะเก็บในรูปแบบ URL Link</p>
+<p>กรณีที่มีการลงลายมือชื่ออิเล็กทรอนิกส์ผิดพลาด ระบบจะแสดงข้อความ Error ประมาณนี้</p>
+<img alt="../_images/image9.png" class="align-center" src="../_images/image9.png" />
+<p>สาเหตุหลัก ๆ ที่จะทำเกิด Error นั้น ส่วนใหญ่เกิดจากการที่ระบบต้นทางไม่มีข้อมูลบางส่วนที่ docsign server ต้องการ ซึ่งในที่นี้คือ ลูกค้าไม่มีข้อมูลเลขประจำตัวผู้เสียภาษี ก็ให้ไปทำการเพิ่มเลขประจำตัวผู้เสียภาษีที่ลูกค้า แล้วให้ลองอีกครั้งหนึ่ง</p>
+<p>อีกสาเหตุที่มีโอกาสเกิดคือ เอกสารที่ทำรายการไม่มี Product และ Product Code มีการเว้นช่องว่างไว้ 1 วรรค ทำให้ระบบ Error ได้</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../technical/manual_tech.html" class="btn btn-neutral float-right" title="โครงสร้างการเขียน Code สำหรับระบบอื่น" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to ETAX Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Ecosoft Co., Ltd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

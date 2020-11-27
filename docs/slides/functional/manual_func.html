@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>การออกเลข Pre-print ในระบบ &mdash; ETAX  documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/single.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <link rel="stylesheet" href="../_static/odoo.css" type="text/css" />
+    
+    
+    
+    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/common.js"></script>
+    
+    <script type="text/javascript" src="../_static/slides.js"></script>
+    <script type="text/javascript" src="../_static/sync.js"></script>
+    <script type="text/javascript" src="../_static/controller.js"></script>
+    <script type="text/javascript" src="../_static/init.js"></script>
+    
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="top" title="ETAX  documentation" href="../index.html" />
+    <link rel="next" title="โครงสร้างการเขียน Code สำหรับระบบอื่น" href="../technical/manual_tech.html" />
+    <link rel="prev" title="Welcome to ETAX Documentation" href="../index.html" /> 
+  </head>
+  <body>
+
+<section
+   id="slide_container"
+   class='slides layout-regular'>
+
+
+  
+<article class="slide level-1" id="pre-print">
+
+<h1>การออกเลข Pre-print ในระบบ</h1>
+
+<p>เมื่อทำการติดตั้งโมดูล pabi_ir_sequence_preprint ระบบ PABI2 จะสามารถสร้างหมายเลข Pre-print เมื่อเอกสารใบนั้นกำลังจะทำการบันทึกภาษี โดยที่ไม่ต้องใช้หมายเลขจากกระดาษ Pre-print ซึ่งจะมีรูปแบบหมายเลขดังนี้</p>
+<ul class="simple">
+<li>Receipt Tax Invoice : รูปแบบ RT&lt;ปีปฏิทิน&gt;/&lt;เดือนปฏิทิน&gt;-&lt;หมายเลข 4 หลัก&gt; เช่น RT2563/08-0001</li>
+<li>Invoice Tax : รูปแบบ IVT&lt;ปีปฏิทิน&gt;/&lt;เดือนปฏิทิน&gt;-&lt;หมายเลข 4 หลัก&gt; เช่น IVT2563/08-0001</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id1">
+
+<h2>การตั้งค่าระบบการออกหมายเลข Pre-print</h2>
+
+<ul class="simple">
+<li>ไปที่เมนู Settings &gt; Technical &gt; Sequences &amp; Identifiers</li>
+<li>จะพบว่ามีเมนูใหม่เพิ่มขึ้นมา คือ Sequence Preprint ให้เลือกเอกสารที่ต้องการแก้ไข</li>
+</ul>
+<img alt="../_images/image2.png" class="align-center" src="../_images/image2.png" />
+<ul class="simple">
+<li>หมายเลข 1 คือ การแสดง &lt;หมายเลข&gt; จำนวนกี่หลัก</li>
+<li>หมายเลข 2 คือ การเพิ่มขึ้นของ &lt;หมายเลข&gt; ครั้งละเท่าไหร่</li>
+<li>หมายเลข 3 คือ การแสดง &lt;ปีปฏิทิน&gt; เป็น พุทธศักราช (พ.ศ.) หากไม่เลือกระบบจะแสดงเป็น คริสต์ศักราช (ค.ศ.)</li>
+<li>หมายเลข 4 คือ การแบ่งการสร้างหมายเลขถัดไป</li>
+<li>หมายเลข 5 คือ การสร้างหมายเลขใหม่ทุกๆเดือน หากไม่เลือกระบบจะสร้างหมายเลขใหม่ทุกๆปี</li>
+<li>หมายเลข 6 คือ ระยะเวลาในการสร้างหมายเลข เมื่อเลยช่วงระยะเวลา ระบบจะสร้างของเดือนถัดไปให้อัตโนมัติ (กรณีเลือกข้อ 5)</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-2" id="id2">
+
+<h2>วิธีการเรียกใช้ Pre-print ในระบบ</h2>
+
+<ul class="simple">
+<li>คล้ายกับการเรียก Sequence เดิม คือ เรียกโดยใช้ function next_by_id หรือ next_by_code ได้ โดยจะต้องเรียก module ที่ชื่อว่า ir.sequence.preprint สามารถดูตัวอย่างการเรียกใช้ Pre-print ได้ที่ ./pb2_addons/l10n_th_account_tax_detail/models/account_tax_detail.py ใน function _create_sequence_preprint</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="pabi2">
+
+<h1>การตั้งค่าการเชื่อมต่อในระบบ PABI2</h1>
+
+<p>เมื่อทำการติดตั้งโมดูล pabi_docsign_interface ให้ไปที่เมนู: Settings &gt; Configuration &gt; PABI Web. จะเห็นว่าในระบบมีการตั้งค่าเพิ่มเติมในหัวข้อ e-Tax Webservice Configuration</p>
+<img alt="../_images/image3.png" class="align-center" src="../_images/image3.png" />
+<ul>
+<li><p class="first">ซึ่งจะมีรายละเอียดการตั้งค่าดังนี้</p>
+<blockquote>
+<div><ul class="simple">
+<li>หมายเลข 1 : กรอก URL ของ Docsign Server</li>
+<li>หมายเลข 2 : กรอกชื่อ Database ของ Docsign Server</li>
+<li>หมายเลข 3 : กรอก username</li>
+<li>หมายเลข 4 : กรอก password</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+
+
+
+
+</article>
+<article class="slide level-1" id="docsign-server-i-net">
+
+<h1>การตั้งค่าการเชื่อมต่อ Docsign Server ไปยัง i-net</h1>
+
+<p>หลังจากได้รับ key จริงแล้ว ทาง สวทช. จะต้องมาแก้ไขที่ระบบ Server เพื่อให้ระบบส่งข้อมูลไปให้ i-net โดยมีขั้นตอนการตั้งค่าดังนี้</p>
+<ol class="arabic simple">
+<li>ไปที่เมนู Settings &gt; Technical &gt; Parameters &gt; System Parameters</li>
+<li>ข้อมูลที่ขึ้นต้นด้วย webservice ทั้งหมดจะได้รับจากทาง i-net</li>
+</ol>
+<img alt="../_images/image4.png" class="align-center" src="../_images/image4.png" />
+<ol class="arabic simple" start="3">
+<li>ปัจจุบันข้อมูลที่ใช้เป็น webservice ที่สำหรับทดสอบเท่านั้น เมื่อได้รับข้อมูลจาก i-net แล้วสามารถแก้ไขข้อมูลในส่วนนี้ให้ถูกต้อง</li>
+</ol>
+
+
+
+
+</article>
+<article class="slide level-1" id="id3">
+
+<h1>การส่งเอกสารในระบบ PABI2 เพื่อลงลายมือชื่ออิเล็กทรอนิกส์</h1>
+
+<p>เอกสารที่ระบบ Docsign Server รองรับมีทั้งหมด 4 ประเภท คือ</p>
+<ol class="arabic simple">
+<li>ใบเสร็จรับเงิน / ใบกำกับภาษี</li>
+<li>ใบเสร็จรับเงิน / ใบกำกับภาษี 300% (ในระบบ PABI2 คือ 200%)</li>
+<li>ใบลดหนี้ / ใบกำกับภาษี</li>
+<li>ใบส่งของ / ใบกำกับภาษี (ส่งจาก mySale)</li>
+</ol>
+<p>วิธีการลงลายมือชื่ออิเล็กทรอนิกส์</p>
+<ol class="arabic simple">
+<li>ไปที่เมนู Accounting &gt; Customers &gt; Customer Payments</li>
+<li>ที่หน้าเอกสารจะมี Field เพิ่มขึ้นมาชื่อว่า State Sign เพื่อบอกสถานะการลงลายมือชื่ออิเล็กทรอนิกส์ของเอกสารนั้น ๆ</li>
+<li>Print &gt; Print Receipt</li>
+</ol>
+<img alt="../_images/image5.png" class="align-center" src="../_images/image5.png" />
+<ol class="arabic" start="4">
+<li><p class="first">ที่หน้า Print จะมีปุ่มเพิ่มขึ้นมา 3 ปุ่มคือ Preview, Sign และ Update Sign</p>
+<blockquote>
+<div><ul class="simple">
+<li>Preview คือ การสร้างเอกสารใน Docsign Server และส่งกลับมาที่ระบบต้นทาง โดยจะไม่มีการลงลายมือชื่ออิเล็กทรอนิกส์ เพื่อให้ผู้ใช้งานเห็นเอกสารก่อนที่จะลงลายมือชื่ออิเล็กทรอนิกส์</li>
+<li>Sign คือ การสร้างเอกสารใน Document Server และส่งข้อมูลทั้งหมดไปลงลายมือชื่ออิเล็กทรอนิกส์ ก่อนที่จะส่งกลับมาที่ต้นทาง</li>
+<li>Update Sign จะเห็นแทนปุ่ม Sign เมื่อเอกสารนั้นเคยลงลายมือชื่ออิเล็กทรอนิกส์ไปแล้ว ใช้สำหรับการแก้ไขข้อมูลในเอกสารนั้น</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<img alt="../_images/image6.png" class="align-center" src="../_images/image6.png" />
+<ol class="arabic simple" start="5">
+<li>เลือกฟอร์มที่ต้องการลงลายมือชื่ออิเล็กทรอนิกส์ ถ้าฟอร์มที่เลือกนั้นไม่สามารถลงลายมือชื่ออิเล็กทรอนิกส์ได้ระบบจะขึ้น Error ซึ่งเอกสารที่รองรับการลงลายมือชื่ออิเล็กทรอนิกส์ สามารถดูได้จากด้านบน</li>
+</ol>
+<img alt="../_images/image7.png" class="align-center" src="../_images/image7.png" />
+<ol class="arabic simple" start="6">
+<li>กรณีต้องการดูตัวอย่างเอกสารก่อนลงลายมือชื่ออิเล็กทรอนิกส์จริง สามารถคลิกที่ปุ่ม Preview แล้วระบบจะสร้างเอกสารให้ที่ Attachment File</li>
+</ol>
+<img alt="../_images/image8.png" class="align-center" src="../_images/image8.png" />
+<ol class="arabic simple" start="7">
+<li>เมื่อตรวจสอบข้อมูลถูกต้องแล้วสามารถคลิกปุ่ม Sign ได้เลย ซึ่งในระบบจะยืนยันการทำรายการอีกทีหนึ่ง</li>
+</ol>
+<p>ถ้าระบบลงลายมือชื่ออิเล็กทรอนิกส์สำเร็จ กรณีมีเอกสารที่เคย Preview ไว้จะหายไป และมีเอกสารที่ลงลายมือชื่ออิเล็กทรอนิกส์สำเร็จมาแทนที่ หากไม่เคย Preview จะพบว่ามีเอกสารไฟล์แนบเพิ่มขึ้นมา ซึ่งจะเก็บในรูปแบบ URL Link</p>
+<p>กรณีที่มีการลงลายมือชื่ออิเล็กทรอนิกส์ผิดพลาด ระบบจะแสดงข้อความ Error ประมาณนี้</p>
+<img alt="../_images/image9.png" class="align-center" src="../_images/image9.png" />
+<p>สาเหตุหลัก ๆ ที่จะทำเกิด Error นั้น ส่วนใหญ่เกิดจากการที่ระบบต้นทางไม่มีข้อมูลบางส่วนที่ docsign server ต้องการ ซึ่งในที่นี้คือ ลูกค้าไม่มีข้อมูลเลขประจำตัวผู้เสียภาษี ก็ให้ไปทำการเพิ่มเลขประจำตัวผู้เสียภาษีที่ลูกค้า แล้วให้ลองอีกครั้งหนึ่ง</p>
+<p>อีกสาเหตุที่มีโอกาสเกิดคือ เอกสารที่ทำรายการไม่มี Product และ Product Code มีการเว้นช่องว่างไว้ 1 วรรค ทำให้ระบบ Error ได้</p>
+
+
+
+
+</article>
+
+</section>
+
+<section id="slide_notes">
+
+</section>
+
+  </body>
+</html>

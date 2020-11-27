@@ -65,3 +65,7 @@ slide_theme = 'single-level'
 slide_theme_options = {
     'custom_css': 'odoo.css',
 }
+
+html_css_files = [
+    'custom.css',
+]

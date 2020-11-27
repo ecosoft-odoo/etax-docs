@@ -1,0 +1,107 @@
+Index,Name,Description,Pattern,Type,
+1,doctype,"| **ประเภทเอกสาร**
+| **รหัส ประเภท**
+| 80  ใบเพิ่มหนี้
+| 81  ใบลดหนี้
+| 380 ใบแจ้งหนี้
+| 388 ใบกำกับภาษี
+| T01 ใบรับ
+| T02 ใบแจ้งหนี้/ใบกำกับภาษี
+| T03 ใบเสร็จรับเงิน/ใบกำกับภาษี
+| T04 ใบส่งของ/ใบกำกับภาษี
+| T05 ใบกำกับภาษีอย่างย่อ
+| T06 ใบเสร็จรับเงิน/ใบกำกับภาษีอย่างย่อ
+| T07 ใบแจ้งยกเลิก",‘T03’,string,R
+2,docform,"ประเภทฟอร์มที่ระบบรองรับ
+- customer_tax_receipt
+- customer_tax_receipt200
+- delivery_order_tax_receipt
+- invoice/refund",‘customer_tax_receipt’,string,R
+3,lang_form,"ภาษาที่ต้องการออกฟอร์ม
+- th
+- en",‘th’,string,R
+4,number,หมายเลขเอกสาร (Pre-print),‘RC2563/08-0001’,string,R
+5,customer_code,รหัสผู้ซื้อ,,string,R
+6,customer_name,ชื่อผู้ซื้อ,,string,R
+7,seller_name,ชื่อผู้ขาย,,string,R
+8,currency,ค่าเงินในการขาย,‘THB’,string,R
+9,date_document,วันที่สร้างเอกสาร,‘YYYY-MM-DD’,string,R
+10,operating_unit,หน่วยงาน,,string,
+11,purpose_code,"| **รหัสสาเหตุที่ออกเอกสารใหม่**
+| **รหัสสาเหตุ : คำอธิบาย**
+| DBNG01 มีการเพิ่มราคาค่าสินค้า (สินค้าเกินกว่าจำนวนที่ตกลงกัน)
+| DBNG02 คำนวณราคาสินค้า ผิดพลาดต่ำกว่าที่เป็นจริง
+| DBNG99 เหตุอื่น (ระบุสาเหตุ)
+| DBNS01 การเพิ่มราคาค่าบริการ (บริการเกินกว่าข้อกำหนดทตกลงกัน)
+| DBNS02 คำนวณราคาค่าบริการ ผิดพลาดต่ำกว่าที่เป็นจริง
+| DBNS99 เหตุอื่น (ระบุสาเหตุ)
+| CDNG01 ลดราคาสินค้าที่ขาย (สินค้าผิดข้อกำหนดที่ตกลงกัน)
+| CDNG02 สินค้าชำรุดเสียหาย
+| CDNG03 สินค้าขาดจำนวนตามที่ตกลงซื้อขาย
+| CDNG04 คำนวณราคาสินค้าผิดพลาดสูงกว่าที่เป็นจริง
+| CDNG05 รับคืนสินค้า (ไม่ตรงตามคำพรรณนา)
+| CDNG99 เหตุอื่น (ระบุสาเหตุ)
+| CDNS01 ลดราคาค่าบริการ (บริการผิดข้อกำหนดที่ตกลงกัน)
+| CDNS02 ค่าบริการขาดจำนวน
+| CDNS03 คำนวณราคาค่าบริการผิดพลาดสูงกว่าที่เป็นจริง
+| CDNS04 บอกเลิกสัญญาบริการ
+| CDNS99 เหตุอื่น (ระบุสาเหตุ)
+| TIVC01 ชื่อผิด
+| TIVC02 ที่อยู่ผิด
+| TIVC99 เหตุอื่น (ระบุสาเหตุ)
+| RCTC01 ชื่อผิด
+| RCTC02 ที่อยู่ผิด
+| RCTC03 รับคืนสินค้า / ยกเลิกบริการ ทั้งจำนวน (ระบุจำนวนเงิน) บาท
+| RCTC04 รับคืนสินค้า / ยกเลิกบริการ บางส่วนจำนวน (ระบุจำนวนเงิน) บาท
+| RCTC99 เหตุอื่น (ระบุสาเหตุ)",‘TIVC02’,string,
+12,purpose_reason_other,กรณีเลือก purpose code เป็น เหตุผลอื่นๆ ให้ระบุข้อมูลที่ช่องนี้,,Text,
+13,notes,เพิ่มเติม,,string,
+14,customer_street,ที่อยู่ 1 ผู้ซื้อ,,string,
+15,customer_street2,ที่อยู่ 2 ผู้ซื้อ,,string,
+16,customer_city,เขต,,string,
+17,customer_state,จังหวัด,,string,
+18,customer_zip,รหัสไปรษณีย์,,string,
+19,customer_country_code,รหัสประเทศผู้ซื้อ,‘TH’,string,R
+20,customer_province_code,รหัสจังหวัดผู้ซื้อ,‘10‘,string,R
+21,customer_district_code,รหัสอำเภอผู้ซื้อ,‘1010’,string,R
+22,customer_subdistrict_code,รหัสตำบลผู้ซื้อ,‘101004’,string,R
+23,customer_vat,เลขประจำตัวผู้เสียภาษีผู้ซื้อ,,string,
+24,customer_phone,เบอร์โทรศัพท์ผู้ซื้อ,,string,
+25,customer_email,อีเมล์ผู้ซื้อ,,string,
+26,customer_taxbranch_code,รหัสสาขาผู้ซื้อ,‘00000’,string,
+27,customer_taxbranch_name,ชื่อสาขาผู้ซื้อ,,string,
+28,customer_is_company,ตัวกำหนดลูกค้าว่าเป็นบริษัทหรือไม่,,boolean,
+29,seller_street,ที่อยู่ 1 ผู้ขาย,,string,
+30,seller_street2,ที่อยู่ 2 ผู้ขาย,,string,
+31,seller_city,เขต,,string,
+32,seller_state,จังหวัด,,string,
+33,seller_zip,รหัสไปรษณีย์,,string,
+34,seller_country_code,รหัสประเทศผู้ขาย,‘TH’,string,R
+35,seller_province_code,รหัสจังหวัดผู้ขาย,‘10’,string,R
+36,seller_district_code,รหัสอำเภอผู้ขาย,‘1010’,string,R
+37,seller_subdistrict_code,รหัสตำบลผู้ขาย,‘101003’,string,R
+,seller_building_number,บ้านเลขที่ผู้ขาย,‘111’,string,R
+38,seller_vat,เลขประจำตัวผู้เสียภาษีผู้ขาย,,string,
+39,seller_phone,เบอร์โทรศัพท์ผู้ขาย,,string,
+40,seller_fax,โทรสารผู้ขาย,,string,
+41,seller_email,อีเมล์ผู้ขาย,,string,
+42,seller_taxbranch_code,รหัสสาขาผู้ขาย,,string,
+43,seller_taxbranch_name,ชื่อสาขาผู้ขาย,,string,
+44,amount_untaxed,ราคารวมก่อนเสียภาษี,,float,R
+45,amount_tax,ภาษี,,float,
+46,amount_total,ราคารวมภาษี,,float,R
+47,system_origin_name,ชื่อระบบต้นทาง,‘pabi2’,string,R
+48,system_origin_number,หมายเลขเอกสารต้นทาง,‘RC200019200’,string,R
+49,user_sign,ชื่อคนทำรายการ,,string,
+50,approved_by,ชื่อคนอนุมัติให้ทำรายการ,,string,
+51,payment_method,"วิธีการจ่ายเงิน
+case
+credit
+transfer
+cheque
+rdx",‘cheque’,string,
+52,check_no,หมายเลข cheque,‘1000033948’,string,
+53,check_date,วันที่จ่าย cheque,‘2020-08-01’,string,
+54,bank_name,ธนาคารที่ใช้จ่ายเงิน,‘BBL’,string,
+55,bank_branch,สาขาของธนาคาร,‘สีลม ?’,string,
+56,rdx_no,หมายเลขการใช้คูปองส่วนลด,‘RDF9K5J42’,string,
