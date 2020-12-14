@@ -36,7 +36,7 @@
 
 การตั้งค่าการเชื่อมต่อในระบบ PABI2
 =====================================
-เมื่อทำการติดตั้งโมดูล pabi_docsign_interface ให้ไปที่เมนู: Settings > Configuration > PABI Web. จะเห็นว่าในระบบมีการตั้งค่าเพิ่มเติมในหัวข้อ e-Tax Webservice Configuration
+เมื่อทำการติดตั้งโมดูล pabi_docsign_interface ให้ไปที่เมนู: Settings > Configuration > PABI Web. จะเห็นว่าในระบบมีการตั้งค่าเพิ่มเติมในหัวข้อ e-Tax Webservice Configuration 
 
 .. image:: images/image3.png
     :align: center
@@ -44,9 +44,12 @@
 * ซึ่งจะมีรายละเอียดการตั้งค่าดังนี้
 
     * หมายเลข 1 : กรอก URL ของ Docsign Server
-    * หมายเลข 2 : กรอกชื่อ Database ของ Docsign Server
-    * หมายเลข 3 : กรอก username
-    * หมายเลข 4 : กรอก password
+    * หมายเลข 2 : กรอก URL ของ Docsign Server สำหรับทดสอบ
+    * หมายเลข 3 : กรอกชื่อ Database ของ Docsign Server
+    * หมายเลข 4 : กรอก username
+    * หมายเลข 5 : กรอก password
+
+โดยระบบจะเช็คก่อนว่ามีการใส่ URL สำหรับทดสอบหรือไม่ ถ้ามีจะส่งไปที่ URL สำหรับทดสอบ แต่ถ้าไม่มี จะส่งไปที่ URL Docsign Server ปกติ
 
 .. nextslide::
 
@@ -61,6 +64,19 @@
     :align: center
     
 3. ปัจจุบันข้อมูลที่ใช้เป็น webservice ที่สำหรับทดสอบเท่านั้น เมื่อได้รับข้อมูลจาก i-net แล้วสามารถแก้ไขข้อมูลในส่วนนี้ให้ถูกต้อง
+
+.. nextslide::
+
+การเปลี่ยนฟอนต์ของเอกสาร
+===================================================
+
+สามารถเปลี่ยนฟ้อนต์เป็นไทยสารบัญได้โดยมีขั้นตอนการตั้งค่าดังนี้ 
+
+1. ไปที่เมนู Settings > Business Documents > Configure Document Layout
+2. เลือกฟ้อนต์ THSarabunNew
+
+.. image:: images/image11.png
+    :align: center
 
 .. nextslide::
 

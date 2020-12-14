@@ -95,7 +95,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#pabi2">การตั้งค่าการเชื่อมต่อในระบบ PABI2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="#docsign-server-i-net">การตั้งค่าการเชื่อมต่อ Docsign Server ไปยัง i-net</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#id3">การส่งเอกสารในระบบ PABI2 เพื่อลงลายมือชื่ออิเล็กทรอนิกส์</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id3">การเปลี่ยนฟอนต์ของเอกสาร</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#id4">การส่งเอกสารในระบบ PABI2 เพื่อลงลายมือชื่ออิเล็กทรอนิกส์</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../technical/manual_tech.html">โครงสร้างการเขียน Code สำหรับระบบอื่น</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../technical/manual_tech.html#id1">เอกสารเพิ่มเติม</a></li>
 </ul>
@@ -202,13 +203,15 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>หมายเลข 1 : กรอก URL ของ Docsign Server</p></li>
-<li><p>หมายเลข 2 : กรอกชื่อ Database ของ Docsign Server</p></li>
-<li><p>หมายเลข 3 : กรอก username</p></li>
-<li><p>หมายเลข 4 : กรอก password</p></li>
+<li><p>หมายเลข 2 : กรอก URL ของ Docsign Server สำหรับทดสอบ</p></li>
+<li><p>หมายเลข 3 : กรอกชื่อ Database ของ Docsign Server</p></li>
+<li><p>หมายเลข 4 : กรอก username</p></li>
+<li><p>หมายเลข 5 : กรอก password</p></li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
+<p>โดยระบบจะเช็คก่อนว่ามีการใส่ URL สำหรับทดสอบหรือไม่ ถ้ามีจะส่งไปที่ URL สำหรับทดสอบ แต่ถ้าไม่มี จะส่งไปที่ URL Docsign Server ปกติ</p>
 </div>
 <div class="section" id="docsign-server-i-net">
 <h1>การตั้งค่าการเชื่อมต่อ Docsign Server ไปยัง i-net<a class="headerlink" href="#docsign-server-i-net" title="Permalink to this headline">¶</a></h1>
@@ -223,7 +226,16 @@
 </ol>
 </div>
 <div class="section" id="id3">
-<h1>การส่งเอกสารในระบบ PABI2 เพื่อลงลายมือชื่ออิเล็กทรอนิกส์<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<h1>การเปลี่ยนฟอนต์ของเอกสาร<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>สามารถเปลี่ยนฟ้อนต์เป็นไทยสารบัญได้โดยมีขั้นตอนการตั้งค่าดังนี้</p>
+<ol class="arabic simple">
+<li><p>ไปที่เมนู Settings &gt; Business Documents &gt; Configure Document Layout</p></li>
+<li><p>เลือกฟ้อนต์ THSarabunNew</p></li>
+</ol>
+<img alt="../_images/image11.png" class="align-center" src="../_images/image11.png" />
+</div>
+<div class="section" id="id4">
+<h1>การส่งเอกสารในระบบ PABI2 เพื่อลงลายมือชื่ออิเล็กทรอนิกส์<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
 <p>เอกสารที่ระบบ Docsign Server รองรับมีทั้งหมด 4 ประเภท คือ</p>
 <ol class="arabic simple">
 <li><p>ใบเสร็จรับเงิน / ใบกำกับภาษี</p></li>
