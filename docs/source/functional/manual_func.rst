@@ -67,15 +67,29 @@
 
 .. nextslide::
 
+การแก้ไขการแสดงฟอนต์ผิดพลาดในรายงาน
+===================================================
+
+หากเจอกรณีที่มีการปริ้นเอกสารแล้วระบบแสดงผลผิดพลาด
+สามารถแก้ไขโดยการอัพเกรดโมดูล web 
+
+.. image:: images/image11.png
+    :align: center
+
+.. image:: images/image12.png
+    :align: center
+
+.. nextslide::
+
 การเปลี่ยนฟอนต์ของเอกสาร
 ===================================================
 
-สามารถเปลี่ยนฟ้อนต์เป็นไทยสารบัญได้โดยมีขั้นตอนการตั้งค่าดังนี้ 
+สามารถเปลี่ยนฟอนต์เป็นไทยสารบัญได้โดยมีขั้นตอนการตั้งค่าดังนี้ 
 
 1. ไปที่เมนู Settings > Business Documents > Configure Document Layout
-2. เลือกฟ้อนต์ THSarabunNew
+2. เลือกฟอนต์ THSarabunNew
 
-.. image:: images/image11.png
+.. image:: images/image13.png
     :align: center
 
 .. nextslide::
@@ -151,12 +165,12 @@
 1. ไปที่เมนู Accounting > Customers > Bank Receipts
 2. ที่เอกสารจะมีปุ่มที่ชื่อว่า Cancel Bank Receipt เพื่อยกเลิกใบเสร็จของธนาคาร
 
-.. image:: images/image12.png
+.. image:: images/image14.png
     :align: center
 
 ระบุเหตุผลการยกเลิกเอกสาร
 
-.. image:: images/image15.png
+.. image:: images/image17.png
     :align: center
 
 3. ไปที่ Customer Payments > Unreconcile เอกการที่จะยกเลิก field State Sign จะต้องมีสถานะ Signed เพื่อบอกสถานะการลงลายมือชื่ออิเล็กทรอนิกส์ของเอกสารนั้น
@@ -165,12 +179,12 @@
 
 4. ที่ Journal Items จะปรากฏ Cancel Journal Entry ซึ่งระบุ CV ที่ถูกยกเลิก
 
-.. image:: images/image13.png
+.. image:: images/image15.png
     :align: center
 
 5. กดเข้าไปที่หน้าเอกของ CV ที่ถูกยกเลิกไปที่ Print > Voucher 
 
-.. image:: images/image14.png
+.. image:: images/image16.png
     :align: center
 
 สามารถ Preview และ Sign ได้เช่นเดียวกับการลงลายมือชื่ออิเล็กทรอนิกส์
