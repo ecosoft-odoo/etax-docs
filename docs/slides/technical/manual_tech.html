@@ -518,34 +518,41 @@
 <td>R</td>
 </tr>
 <tr class="row-odd"><td>47</td>
+<td>origin_id</td>
+<td>ชื่อเอกสารในระบบ Docsign ใช้สำหรับกรณียกเลิกเอกสาร หรืออ้างอิงเอกสารเดิม</td>
+<td>‘RT2564/01-0004’</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>48</td>
 <td>system_origin_name</td>
 <td>ชื่อระบบต้นทาง</td>
 <td>‘pabi2’</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-even"><td>48</td>
+<tr class="row-odd"><td>49</td>
 <td>system_origin_number</td>
 <td>หมายเลขเอกสารต้นทาง</td>
 <td>‘RC200019200’</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-odd"><td>49</td>
+<tr class="row-even"><td>50</td>
 <td>user_sign</td>
 <td>ชื่อคนทำรายการ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>50</td>
+<tr class="row-odd"><td>51</td>
 <td>approved_by</td>
 <td>ชื่อคนอนุมัติให้ทำรายการ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>51</td>
+<tr class="row-even"><td>52</td>
 <td>payment_method</td>
 <td>วิธีการจ่ายเงิน
 case
@@ -557,35 +564,35 @@ rdx</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>52</td>
+<tr class="row-odd"><td>53</td>
 <td>check_no</td>
 <td>หมายเลข cheque</td>
 <td>‘1000033948’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>53</td>
+<tr class="row-even"><td>54</td>
 <td>check_date</td>
 <td>วันที่จ่าย cheque</td>
 <td>‘2020-08-01’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>54</td>
+<tr class="row-odd"><td>55</td>
 <td>bank_name</td>
 <td>ธนาคารที่ใช้จ่ายเงิน</td>
 <td>‘BBL’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>55</td>
+<tr class="row-even"><td>56</td>
 <td>bank_branch</td>
 <td>สาขาของธนาคาร</td>
 <td>‘สีลม ?’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>56</td>
+<tr class="row-odd"><td>57</td>
 <td>rdx_no</td>
 <td>หมายเลขการใช้คูปองส่วนลด</td>
 <td>‘RDF9K5J42’</td>
@@ -785,6 +792,7 @@ rdx</td>
     <span class="s1">&#39;amount_tax&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="s1">&#39;amount_total&#39;</span><span class="p">:</span> <span class="mf">96.2</span><span class="p">,</span>
     <span class="c1"># origin</span>
+    <span class="s1">&#39;origin_id&#39;</span><span class="p">:</span> <span class="s1">&#39;RT2564/01-0004&#39;</span>
     <span class="s1">&#39;system_origin_name&#39;</span><span class="p">:</span> <span class="s1">&#39;pabi2&#39;</span><span class="p">,</span>
     <span class="s1">&#39;system_origin_number&#39;</span><span class="p">:</span> <span class="s1">&#39;RC200003021&#39;</span><span class="p">,</span>
     <span class="s1">&#39;user_sign&#39;</span><span class="p">:</span> <span class="s1">&#39;Admin&#39;</span><span class="p">,</span>
@@ -819,9 +827,24 @@ rdx</td>
 
 
 </article>
-<article class="slide level-2" id="git-hub">
+<article class="slide level-2" id="python-package">
 
-<h2>Git Hub</h2>
+<h2>Python Package เพิ่มเติม</h2>
+
+<p>การติดตั้งโมดูล docsign_template_form จะต้องมีการติดตั้ง Package python เพิ่มเติมดังนี้</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip3</span> <span class="n">install</span> <span class="n">pypng</span>
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">pyqrcode</span>
+<span class="n">pip3</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">barcode</span>
+</pre></div>
+</div>
+
+
+
+
+</article>
+<article class="slide level-2" id="github-reference">
+
+<h2>Github Reference</h2>
 
 <div class="line-block">
 <div class="line">ref: ‘<a class="reference external" href="https://github.com/pabi2/pb2_addons/pull/1945">https://github.com/pabi2/pb2_addons/pull/1945</a>’</div>

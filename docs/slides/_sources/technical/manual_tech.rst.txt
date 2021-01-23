@@ -138,6 +138,7 @@
         'amount_tax': 3,
         'amount_total': 96.2,
         # origin
+        'origin_id': 'RT2564/01-0004'
         'system_origin_name': 'pabi2',
         'system_origin_number': 'RC200003021',
         'user_sign': 'Admin',
@@ -166,8 +167,19 @@
     })]
     }
 
-Git Hub
----------------
+Python Package เพิ่มเติม
+-------------------------------------
+
+การติดตั้งโมดูล docsign_template_form จะต้องมีการติดตั้ง Package python เพิ่มเติมดังนี้
+
+.. code-block:: python
+
+    pip3 install pypng
+    pip3 install pyqrcode
+    pip3 install python-barcode
+
+Github Reference
+------------------------------
 | ref: 'https://github.com/pabi2/pb2_addons/pull/1945'
 | ref: 'https://github.com/pabi2/pb2_addons/pull/1916'
 | ref: 'https://github.com/pabi2/pb2_addons/pull/1906'
