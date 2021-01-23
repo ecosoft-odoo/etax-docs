@@ -90,18 +90,19 @@ Index,Name,Description,Pattern,Type,
 44,amount_untaxed,ราคารวมก่อนเสียภาษี,,float,R
 45,amount_tax,ภาษี,,float,
 46,amount_total,ราคารวมภาษี,,float,R
-47,system_origin_name,ชื่อระบบต้นทาง,‘pabi2’,string,R
-48,system_origin_number,หมายเลขเอกสารต้นทาง,‘RC200019200’,string,R
-49,user_sign,ชื่อคนทำรายการ,,string,
-50,approved_by,ชื่อคนอนุมัติให้ทำรายการ,,string,
-51,payment_method,"วิธีการจ่ายเงิน
+47,origin_id,ชื่อเอกสารในระบบ Docsign ใช้สำหรับกรณียกเลิกเอกสาร หรืออ้างอิงเอกสารเดิม,'RT2564/01-0004',string,
+48,system_origin_name,ชื่อระบบต้นทาง,‘pabi2’,string,R
+49,system_origin_number,หมายเลขเอกสารต้นทาง,‘RC200019200’,string,R
+50,user_sign,ชื่อคนทำรายการ,,string,
+51,approved_by,ชื่อคนอนุมัติให้ทำรายการ,,string,
+52,payment_method,"วิธีการจ่ายเงิน
 case
 credit
 transfer
 cheque
 rdx",‘cheque’,string,
-52,check_no,หมายเลข cheque,‘1000033948’,string,
-53,check_date,วันที่จ่าย cheque,‘2020-08-01’,string,
-54,bank_name,ธนาคารที่ใช้จ่ายเงิน,‘BBL’,string,
-55,bank_branch,สาขาของธนาคาร,‘สีลม ?’,string,
-56,rdx_no,หมายเลขการใช้คูปองส่วนลด,‘RDF9K5J42’,string,
+53,check_no,หมายเลข cheque,‘1000033948’,string,
+54,check_date,วันที่จ่าย cheque,‘2020-08-01’,string,
+55,bank_name,ธนาคารที่ใช้จ่ายเงิน,‘BBL’,string,
+56,bank_branch,สาขาของธนาคาร,‘สีลม ?’,string,
+57,rdx_no,หมายเลขการใช้คูปองส่วนลด,‘RDF9K5J42’,string,
