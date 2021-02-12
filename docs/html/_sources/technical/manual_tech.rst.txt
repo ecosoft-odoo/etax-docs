@@ -91,16 +91,19 @@
         'doctype': 'T03',
         'docform': 'customer_tax_receipt',
         'lang_form': 'th',
-        'number': 'RC2563/08-0001', 
+        'number': 'RC2563/08-0001',
+        'cancel_form': True,
         'customer_code': '001203',
         'customer_name': 'นายทดสอบ ระบบ',
         'seller_name': 'สำนักงาน',
         'currency': 'THB',
         'date_document': '2020-08-01',
+        'create_document': '2020-08-01',
         'operating_unit': 'สก.',
         'purpose_code': 'TIVC99',                              # ใช้สำหรับกรณีออกใหม่ทดแทน
         'purpose_reason_other': 'เปลี่ยนสาขาผู้ขาย',               # ใช้สำหรับกรณีออกใหม่ทดแทน
         'notes': '',
+        'state_draft': False,
         # customer information
         'customer_street': 'อาคารตึกใหญ่ 12 ซอยนราธิวาส',
         'customer_street2': '',
@@ -142,6 +145,8 @@
         'system_origin_name': 'pabi2',
         'system_origin_number': 'RC200003021',
         'user_sign': 'Admin',
+        'validate_by': 'Mr.Adam',
+        'validate_sign': '/9j/4AAQSkZJRgABAQEA...',
         'approved_by': 'Admin',                               # TODO: Waiting new pg.
         # payment method
         'payment_method': voucher.receipt_type,
