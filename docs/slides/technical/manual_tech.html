@@ -305,7 +305,7 @@
 <td>ที่อยู่ 1 ผู้ซื้อ</td>
 <td>&#160;</td>
 <td>string</td>
-<td>&#160;</td>
+<td>R</td>
 </tr>
 <tr class="row-odd"><td>18</td>
 <td>customer_street2</td>
@@ -315,32 +315,32 @@
 <td>&#160;</td>
 </tr>
 <tr class="row-even"><td>19</td>
-<td>customer_city</td>
-<td>เขต</td>
-<td>&#160;</td>
-<td>string</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-odd"><td>20</td>
-<td>customer_state</td>
-<td>จังหวัด</td>
-<td>&#160;</td>
-<td>string</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td>21</td>
 <td>customer_zip</td>
 <td>รหัสไปรษณีย์</td>
 <td>&#160;</td>
 <td>string</td>
-<td>&#160;</td>
+<td>R</td>
 </tr>
-<tr class="row-odd"><td>22</td>
+<tr class="row-odd"><td>20</td>
+<td>customer_building_number</td>
+<td>บ้านเลขที่</td>
+<td>&#160;</td>
+<td>string</td>
+<td>R</td>
+</tr>
+<tr class="row-even"><td>21</td>
 <td>customer_country_code</td>
 <td>รหัสประเทศผู้ซื้อ</td>
 <td>‘TH’</td>
 <td>string</td>
 <td>R</td>
+</tr>
+<tr class="row-odd"><td>22</td>
+<td>customer_country</td>
+<td>ประเทศผู้ซื้อ</td>
+<td>‘ประเทศไทย’</td>
+<td>string</td>
+<td>&#160;</td>
 </tr>
 <tr class="row-even"><td>23</td>
 <td>customer_province_code</td>
@@ -350,244 +350,279 @@
 <td>R</td>
 </tr>
 <tr class="row-odd"><td>24</td>
+<td>customer_state</td>
+<td>จังหวัด</td>
+<td>‘กรุงเทพฯ‘</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>25</td>
 <td>customer_district_code</td>
 <td>รหัสอำเภอผู้ซื้อ</td>
 <td>‘1010’</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-even"><td>25</td>
+<tr class="row-odd"><td>26</td>
+<td>customer_city</td>
+<td>อำเภอ/เขตผู้ซื้อ</td>
+<td>‘บางรัก’</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>27</td>
 <td>customer_subdistrict_code</td>
 <td>รหัสตำบลผู้ซื้อ</td>
 <td>‘101004’</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-odd"><td>26</td>
+<tr class="row-odd"><td>28</td>
+<td>customer_subdistrict</td>
+<td>ตำบล/แขวงผู้ซื้อ</td>
+<td>‘สีลม’</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>29</td>
 <td>customer_vat</td>
 <td>เลขประจำตัวผู้เสียภาษีผู้ซื้อ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>27</td>
+<tr class="row-odd"><td>30</td>
 <td>customer_phone</td>
 <td>เบอร์โทรศัพท์ผู้ซื้อ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>28</td>
+<tr class="row-even"><td>31</td>
 <td>customer_email</td>
 <td>อีเมล์ผู้ซื้อ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>29</td>
+<tr class="row-odd"><td>32</td>
 <td>customer_taxbranch_code</td>
 <td>รหัสสาขาผู้ซื้อ</td>
 <td>‘00000’</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-odd"><td>30</td>
+<tr class="row-even"><td>33</td>
 <td>customer_taxbranch_name</td>
 <td>ชื่อสาขาผู้ซื้อ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-even"><td>31</td>
+<tr class="row-odd"><td>34</td>
 <td>customer_is_company</td>
 <td>ตัวกำหนดลูกค้าว่าเป็นบริษัทหรือไม่</td>
 <td>&#160;</td>
 <td>boolean</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>32</td>
+<tr class="row-even"><td>35</td>
 <td>seller_street</td>
 <td>ที่อยู่ 1 ผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
-<td>&#160;</td>
+<td>R</td>
 </tr>
-<tr class="row-even"><td>33</td>
+<tr class="row-odd"><td>36</td>
 <td>seller_street2</td>
 <td>ที่อยู่ 2 ผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>34</td>
-<td>seller_city</td>
-<td>เขต</td>
-<td>&#160;</td>
-<td>string</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td>35</td>
-<td>seller_state</td>
-<td>จังหวัด</td>
-<td>&#160;</td>
-<td>string</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-odd"><td>36</td>
+<tr class="row-even"><td>37</td>
 <td>seller_zip</td>
 <td>รหัสไปรษณีย์</td>
 <td>&#160;</td>
 <td>string</td>
-<td>&#160;</td>
-</tr>
-<tr class="row-even"><td>37</td>
-<td>seller_country_code</td>
-<td>รหัสประเทศผู้ขาย</td>
-<td>‘TH’</td>
-<td>string</td>
 <td>R</td>
 </tr>
 <tr class="row-odd"><td>38</td>
-<td>seller_province_code</td>
-<td>รหัสจังหวัดผู้ขาย</td>
-<td>‘10’</td>
-<td>string</td>
-<td>R</td>
-</tr>
-<tr class="row-even"><td>39</td>
-<td>seller_district_code</td>
-<td>รหัสอำเภอผู้ขาย</td>
-<td>‘1010’</td>
-<td>string</td>
-<td>R</td>
-</tr>
-<tr class="row-odd"><td>40</td>
-<td>seller_subdistrict_code</td>
-<td>รหัสตำบลผู้ขาย</td>
-<td>‘101003’</td>
-<td>string</td>
-<td>R</td>
-</tr>
-<tr class="row-even"><td>41</td>
 <td>seller_building_number</td>
 <td>บ้านเลขที่ผู้ขาย</td>
 <td>‘111’</td>
 <td>string</td>
 <td>R</td>
 </tr>
+<tr class="row-even"><td>39</td>
+<td>seller_country_code</td>
+<td>รหัสประเทศผู้ขาย</td>
+<td>‘TH’</td>
+<td>string</td>
+<td>R</td>
+</tr>
+<tr class="row-odd"><td>40</td>
+<td>seller_country</td>
+<td>ประเทศผู้ขาย</td>
+<td>&#160;</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>41</td>
+<td>seller_province_code</td>
+<td>รหัสจังหวัดผู้ขาย</td>
+<td>‘10’</td>
+<td>string</td>
+<td>R</td>
+</tr>
 <tr class="row-odd"><td>42</td>
+<td>seller_state</td>
+<td>จังหวัดผู้ขาย</td>
+<td>&#160;</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>43</td>
+<td>seller_district_code</td>
+<td>รหัสอำเภอผู้ขาย</td>
+<td>‘1010’</td>
+<td>string</td>
+<td>R</td>
+</tr>
+<tr class="row-odd"><td>44</td>
+<td>seller_city</td>
+<td>อำเภอ/เขตผู้ขาย</td>
+<td>&#160;</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>45</td>
+<td>seller_subdistrict_code</td>
+<td>รหัสตำบลผู้ขาย</td>
+<td>‘101003’</td>
+<td>string</td>
+<td>R</td>
+</tr>
+<tr class="row-odd"><td>46</td>
+<td>seller_subdistrict</td>
+<td>ตำบล/แขวงผู้ขาย</td>
+<td>&#160;</td>
+<td>string</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>47</td>
 <td>seller_vat</td>
 <td>เลขประจำตัวผู้เสียภาษีผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>43</td>
+<tr class="row-odd"><td>48</td>
 <td>seller_phone</td>
 <td>เบอร์โทรศัพท์ผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>44</td>
+<tr class="row-even"><td>49</td>
 <td>seller_fax</td>
 <td>โทรสารผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>45</td>
+<tr class="row-odd"><td>50</td>
 <td>seller_email</td>
 <td>อีเมล์ผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>46</td>
+<tr class="row-even"><td>51</td>
 <td>seller_taxbranch_code</td>
 <td>รหัสสาขาผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
-<td>&#160;</td>
+<td>R</td>
 </tr>
-<tr class="row-even"><td>47</td>
+<tr class="row-odd"><td>52</td>
 <td>seller_taxbranch_name</td>
 <td>ชื่อสาขาผู้ขาย</td>
 <td>&#160;</td>
 <td>string</td>
-<td>&#160;</td>
+<td>R</td>
 </tr>
-<tr class="row-odd"><td>48</td>
+<tr class="row-even"><td>53</td>
 <td>amount_untaxed</td>
 <td>ราคารวมก่อนเสียภาษี</td>
 <td>&#160;</td>
 <td>float</td>
 <td>R</td>
 </tr>
-<tr class="row-even"><td>49</td>
+<tr class="row-odd"><td>54</td>
 <td>amount_tax</td>
 <td>ภาษี</td>
 <td>&#160;</td>
 <td>float</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>50</td>
+<tr class="row-even"><td>55</td>
 <td>amount_total</td>
 <td>ราคารวมภาษี</td>
 <td>&#160;</td>
 <td>float</td>
 <td>R</td>
 </tr>
-<tr class="row-even"><td>51</td>
+<tr class="row-odd"><td>56</td>
 <td>origin_id</td>
 <td>ชื่อเอกสารในระบบ Docsign ใช้สำหรับกรณียกเลิกเอกสาร หรืออ้างอิงเอกสารเดิม</td>
 <td>‘RT2564/01-0004’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>52</td>
+<tr class="row-even"><td>57</td>
 <td>system_origin_name</td>
 <td>ชื่อระบบต้นทาง</td>
 <td>‘pabi2’</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-even"><td>53</td>
+<tr class="row-odd"><td>58</td>
 <td>system_origin_number</td>
 <td>หมายเลขเอกสารต้นทาง</td>
 <td>‘RC200019200’</td>
 <td>string</td>
 <td>R</td>
 </tr>
-<tr class="row-odd"><td>54</td>
+<tr class="row-even"><td>59</td>
 <td>user_sign</td>
 <td>ชื่อคนทำรายการ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>55</td>
+<tr class="row-odd"><td>60</td>
 <td>validate_by</td>
 <td>ชื่อคนอนุมัติให้ทำรายการ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>56</td>
+<tr class="row-even"><td>61</td>
 <td>validate_sign</td>
 <td>ชื่อคนอนุมัติให้ทำรายการ (ลายเซ็น)</td>
 <td>&#160;</td>
 <td>binary</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>57</td>
+<tr class="row-odd"><td>62</td>
 <td>approved_by</td>
 <td>ชื่อคนมีอำนาจให้ทำรายการ</td>
 <td>&#160;</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>58</td>
+<tr class="row-even"><td>63</td>
 <td>payment_method</td>
 <td>วิธีการจ่ายเงิน
 case
@@ -599,35 +634,35 @@ rdx</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>59</td>
+<tr class="row-odd"><td>64</td>
 <td>check_no</td>
 <td>หมายเลข cheque</td>
 <td>‘1000033948’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>60</td>
+<tr class="row-even"><td>65</td>
 <td>check_date</td>
 <td>วันที่จ่าย cheque</td>
 <td>‘2020-08-01’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>61</td>
+<tr class="row-odd"><td>66</td>
 <td>bank_name</td>
 <td>ธนาคารที่ใช้จ่ายเงิน</td>
 <td>‘BBL’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-odd"><td>62</td>
+<tr class="row-even"><td>67</td>
 <td>bank_branch</td>
 <td>สาขาของธนาคาร</td>
 <td>‘สีลม ?’</td>
 <td>string</td>
 <td>&#160;</td>
 </tr>
-<tr class="row-even"><td>63</td>
+<tr class="row-odd"><td>68</td>
 <td>rdx_no</td>
 <td>หมายเลขการใช้คูปองส่วนลด</td>
 <td>‘RDF9K5J42’</td>
@@ -798,6 +833,9 @@ rdx</td>
     <span class="s1">&#39;customer_street2&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;customer_city&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;customer_state&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;customer_country&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;customer_subdistrict&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;customer_building_number&#39;</span><span class="p">:</span> <span class="s1">&#39;111&#39;</span><span class="p">,</span>
     <span class="s1">&#39;customer_zip&#39;</span><span class="p">:</span> <span class="s1">&#39;10110&#39;</span><span class="p">,</span>
     <span class="s1">&#39;customer_country_code&#39;</span><span class="p">:</span> <span class="s1">&#39;TH&#39;</span><span class="p">,</span>
     <span class="s1">&#39;customer_province_code&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
@@ -814,12 +852,14 @@ rdx</td>
     <span class="s1">&#39;seller_street2&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_city&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_state&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;seller_country&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;seller_subdistrict&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;seller_building_number&#39;</span><span class="p">:</span> <span class="s1">&#39;111&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_zip&#39;</span><span class="p">:</span> <span class="s1">&#39;10300&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_country_code&#39;</span><span class="p">:</span> <span class="s1">&#39;TH&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_province_code&#39;</span><span class="p">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_district_code&#39;</span><span class="p">:</span> <span class="s1">&#39;1001&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_subdistrict_code&#39;</span><span class="p">:</span> <span class="s1">&#39;100103&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;seller_building_number&#39;</span><span class="p">:</span> <span class="s1">&#39;111&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_vat&#39;</span><span class="p">:</span> <span class="s1">&#39;0092839405932&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_phone&#39;</span><span class="p">:</span> <span class="s1">&#39;089-222-1111&#39;</span><span class="p">,</span>
     <span class="s1">&#39;seller_fax&#39;</span><span class="p">:</span> <span class="s1">&#39;0293940506&#39;</span><span class="p">,</span>
@@ -850,7 +890,7 @@ rdx</td>
     <span class="s1">&#39;quantity&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
     <span class="s1">&#39;price_unit&#39;</span><span class="p">:</span> <span class="mf">100.0</span><span class="p">,</span>
     <span class="s1">&#39;price_subtotal&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-    <span class="s1">&#39;product_code&#39;</span><span class="p">:</span> <span class="s1">&#39;00210&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;product_code&#39;</span><span class="p">:</span> <span class="s1">&#39;10020&#39;</span><span class="p">,</span>
     <span class="s1">&#39;product_name&#39;</span><span class="p">:</span> <span class="s1">&#39;กล่องกระดาษ&#39;</span><span class="p">,</span>
     <span class="s1">&#39;taxes&#39;</span><span class="p">:</span> <span class="s1">&#39;Output Vat 7%&#39;</span><span class="p">,</span>
     <span class="s1">&#39;taxes_percent&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>

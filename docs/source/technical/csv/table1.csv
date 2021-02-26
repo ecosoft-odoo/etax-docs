@@ -59,55 +59,60 @@ Index,Name,Description,Pattern,Type,
 14,purpose_reason_other,กรณีเลือก purpose code เป็น เหตุผลอื่นๆ ให้ระบุข้อมูลที่ช่องนี้,,Text,
 15,notes,เพิ่มเติม,,string,
 16,state_draft,การแสดงเอกสารที่เป็น Draft (ไม่มีหมายเลขเอกสาร),,boolean,
-17,customer_street,ที่อยู่ 1 ผู้ซื้อ,,string,
+17,customer_street,ที่อยู่ 1 ผู้ซื้อ,,string,R
 18,customer_street2,ที่อยู่ 2 ผู้ซื้อ,,string,
-19,customer_city,เขต,,string,
-20,customer_state,จังหวัด,,string,
-21,customer_zip,รหัสไปรษณีย์,,string,
-22,customer_country_code,รหัสประเทศผู้ซื้อ,‘TH’,string,R
+19,customer_zip,รหัสไปรษณีย์,,string,R
+20,customer_building_number,บ้านเลขที่,,string,R
+21,customer_country_code,รหัสประเทศผู้ซื้อ,‘TH’,string,R
+22,customer_country,ประเทศผู้ซื้อ,‘ประเทศไทย’,string,
 23,customer_province_code,รหัสจังหวัดผู้ซื้อ,‘10‘,string,R
-24,customer_district_code,รหัสอำเภอผู้ซื้อ,‘1010’,string,R
-25,customer_subdistrict_code,รหัสตำบลผู้ซื้อ,‘101004’,string,R
-26,customer_vat,เลขประจำตัวผู้เสียภาษีผู้ซื้อ,,string,
-27,customer_phone,เบอร์โทรศัพท์ผู้ซื้อ,,string,
-28,customer_email,อีเมล์ผู้ซื้อ,,string,
-29,customer_taxbranch_code,รหัสสาขาผู้ซื้อ,‘00000’,string,R
-30,customer_taxbranch_name,ชื่อสาขาผู้ซื้อ,,string,R
-31,customer_is_company,ตัวกำหนดลูกค้าว่าเป็นบริษัทหรือไม่,,boolean,
-32,seller_street,ที่อยู่ 1 ผู้ขาย,,string,
-33,seller_street2,ที่อยู่ 2 ผู้ขาย,,string,
-34,seller_city,เขต,,string,
-35,seller_state,จังหวัด,,string,
-36,seller_zip,รหัสไปรษณีย์,,string,
-37,seller_country_code,รหัสประเทศผู้ขาย,‘TH’,string,R
-38,seller_province_code,รหัสจังหวัดผู้ขาย,‘10’,string,R
-39,seller_district_code,รหัสอำเภอผู้ขาย,‘1010’,string,R
-40,seller_subdistrict_code,รหัสตำบลผู้ขาย,‘101003’,string,R
-41,seller_building_number,บ้านเลขที่ผู้ขาย,‘111’,string,R
-42,seller_vat,เลขประจำตัวผู้เสียภาษีผู้ขาย,,string,
-43,seller_phone,เบอร์โทรศัพท์ผู้ขาย,,string,
-44,seller_fax,โทรสารผู้ขาย,,string,
-45,seller_email,อีเมล์ผู้ขาย,,string,
-46,seller_taxbranch_code,รหัสสาขาผู้ขาย,,string,
-47,seller_taxbranch_name,ชื่อสาขาผู้ขาย,,string,
-48,amount_untaxed,ราคารวมก่อนเสียภาษี,,float,R
-49,amount_tax,ภาษี,,float,
-50,amount_total,ราคารวมภาษี,,float,R
-51,origin_id,ชื่อเอกสารในระบบ Docsign ใช้สำหรับกรณียกเลิกเอกสาร หรืออ้างอิงเอกสารเดิม,'RT2564/01-0004',string,
-52,system_origin_name,ชื่อระบบต้นทาง,‘pabi2’,string,R
-53,system_origin_number,หมายเลขเอกสารต้นทาง,‘RC200019200’,string,R
-54,user_sign,ชื่อคนทำรายการ,,string,
-55,validate_by,ชื่อคนอนุมัติให้ทำรายการ,,string,
-56,validate_sign,ชื่อคนอนุมัติให้ทำรายการ (ลายเซ็น),,binary,
-57,approved_by,ชื่อคนมีอำนาจให้ทำรายการ,,string,
-58,payment_method,"วิธีการจ่ายเงิน
+24,customer_state,จังหวัด,‘กรุงเทพฯ‘,string,
+25,customer_district_code,รหัสอำเภอผู้ซื้อ,‘1010’,string,R
+26,customer_city,อำเภอ/เขตผู้ซื้อ,‘บางรัก’,string,
+27,customer_subdistrict_code,รหัสตำบลผู้ซื้อ,‘101004’,string,R
+28,customer_subdistrict,ตำบล/แขวงผู้ซื้อ,‘สีลม’,string,
+29,customer_vat,เลขประจำตัวผู้เสียภาษีผู้ซื้อ,,string,
+30,customer_phone,เบอร์โทรศัพท์ผู้ซื้อ,,string,
+31,customer_email,อีเมล์ผู้ซื้อ,,string,
+32,customer_taxbranch_code,รหัสสาขาผู้ซื้อ,‘00000’,string,R
+33,customer_taxbranch_name,ชื่อสาขาผู้ซื้อ,,string,R
+34,customer_is_company,ตัวกำหนดลูกค้าว่าเป็นบริษัทหรือไม่,,boolean,
+35,seller_street,ที่อยู่ 1 ผู้ขาย,,string,R
+36,seller_street2,ที่อยู่ 2 ผู้ขาย,,string,
+37,seller_zip,รหัสไปรษณีย์,,string,R
+38,seller_building_number,บ้านเลขที่ผู้ขาย,‘111’,string,R
+39,seller_country_code,รหัสประเทศผู้ขาย,‘TH’,string,R
+40,seller_country,ประเทศผู้ขาย,,string,
+41,seller_province_code,รหัสจังหวัดผู้ขาย,‘10’,string,R
+42,seller_state,จังหวัดผู้ขาย,,string,
+43,seller_district_code,รหัสอำเภอผู้ขาย,‘1010’,string,R
+44,seller_city,อำเภอ/เขตผู้ขาย,,string,
+45,seller_subdistrict_code,รหัสตำบลผู้ขาย,‘101003’,string,R
+46,seller_subdistrict,ตำบล/แขวงผู้ขาย,,string,
+47,seller_vat,เลขประจำตัวผู้เสียภาษีผู้ขาย,,string,
+48,seller_phone,เบอร์โทรศัพท์ผู้ขาย,,string,
+49,seller_fax,โทรสารผู้ขาย,,string,
+50,seller_email,อีเมล์ผู้ขาย,,string,
+51,seller_taxbranch_code,รหัสสาขาผู้ขาย,,string,R
+52,seller_taxbranch_name,ชื่อสาขาผู้ขาย,,string,R
+53,amount_untaxed,ราคารวมก่อนเสียภาษี,,float,R
+54,amount_tax,ภาษี,,float,
+55,amount_total,ราคารวมภาษี,,float,R
+56,origin_id,ชื่อเอกสารในระบบ Docsign ใช้สำหรับกรณียกเลิกเอกสาร หรืออ้างอิงเอกสารเดิม,'RT2564/01-0004',string,
+57,system_origin_name,ชื่อระบบต้นทาง,‘pabi2’,string,R
+58,system_origin_number,หมายเลขเอกสารต้นทาง,‘RC200019200’,string,R
+59,user_sign,ชื่อคนทำรายการ,,string,
+60,validate_by,ชื่อคนอนุมัติให้ทำรายการ,,string,
+61,validate_sign,ชื่อคนอนุมัติให้ทำรายการ (ลายเซ็น),,binary,
+62,approved_by,ชื่อคนมีอำนาจให้ทำรายการ,,string,
+63,payment_method,"วิธีการจ่ายเงิน
 case
 credit
 transfer
 cheque
 rdx",‘cheque’,string,
-59,check_no,หมายเลข cheque,‘1000033948’,string,
-60,check_date,วันที่จ่าย cheque,‘2020-08-01’,string,
-61,bank_name,ธนาคารที่ใช้จ่ายเงิน,‘BBL’,string,
-62,bank_branch,สาขาของธนาคาร,‘สีลม ?’,string,
-63,rdx_no,หมายเลขการใช้คูปองส่วนลด,‘RDF9K5J42’,string,
+64,check_no,หมายเลข cheque,‘1000033948’,string,
+65,check_date,วันที่จ่าย cheque,‘2020-08-01’,string,
+66,bank_name,ธนาคารที่ใช้จ่ายเงิน,‘BBL’,string,
+67,bank_branch,สาขาของธนาคาร,‘สีลม ?’,string,
+68,rdx_no,หมายเลขการใช้คูปองส่วนลด,‘RDF9K5J42’,string,
