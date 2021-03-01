@@ -13,8 +13,10 @@ Index,Name,Description,Pattern,Type,
 | T06 ใบเสร็จรับเงิน/ใบกำกับภาษีอย่างย่อ
 | T07 ใบแจ้งยกเลิก",‘T03’,string,R
 2,docform,"ประเภทฟอร์มที่ระบบรองรับ
+
 - customer_tax_receipt
 - customer_tax_receipt200
+- customer_receipt
 - delivery_order_tax_receipt
 - invoice/refund",‘customer_tax_receipt’,string,R
 3,lang_form,"ภาษาที่ต้องการออกฟอร์ม
